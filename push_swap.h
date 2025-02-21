@@ -6,21 +6,23 @@
 /*   By: restevez <restevez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/16 07:23:05 by restevez          #+#    #+#             */
-/*   Updated: 2025/02/16 23:33:21 by restevez         ###   ########.fr       */
+/*   Updated: 2025/02/21 07:58:02 by restevez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+# include "libft.h"
 # include <stdlib.h>
+# include <stdio.h>
 
 typedef struct i_list
 {
-	int		n;
-	i_list	*prev;
-	i_list	*next;
-	size_t	target;
+	int				n;
+	struct i_list	*prev;
+	struct i_list	*next;
+	size_t			target;
 }	t_stack;
 
 typedef struct push_swap
@@ -37,6 +39,7 @@ typedef struct push_swap
 	t_stack	*b_mid;
 }	t_push_swap;
 
-
+void	append_stack(t_stack **stack, int n);
+void	ft_pb(t_stack *b, int n);
 
 #endif
