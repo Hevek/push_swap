@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   operations.c                                       :+:      :+:    :+:   */
+/*   sort_three.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: restevez <restevez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/20 21:39:19 by restevez          #+#    #+#             */
-/*   Updated: 2025/02/21 07:57:23 by restevez         ###   ########.fr       */
+/*   Created: 2025/04/18 19:19:58 by restevez          #+#    #+#             */
+/*   Updated: 2025/04/18 19:20:09 by restevez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../../include/push_swap.h"
 
-/*
-	Quick note: DO NOT swap the nodes. Swap the integers and update the target.
-*/
-/* 
-void	ft_ss(t_stack *a, t_stack *b)
+void	sort_three(t_stack_node **a)
 {
-	return ;
-}
+	t_stack_node	*biggest_node;
 
-
-void	ft_rr(t_stack *a, t_stack *b)
-{
-	return ;
+	biggest_node = find_max(*a);
+	if (biggest_node == *a)
+		ra(a, false);
+	else if ((*a)->next == biggest_node)
+		rra(a, false);
+	if ((*a)->nbr > (*a)->next->nbr)
+		sa(a, false);
 }
-
-void	ft_rrr(t_stack *a, t_stack *b)
-{
-	return ;
-}
- */
