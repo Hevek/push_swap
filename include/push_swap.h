@@ -6,7 +6,7 @@
 /*   By: restevez <restevez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:06:55 by restevez          #+#    #+#             */
-/*   Updated: 2025/04/18 19:39:43 by restevez         ###   ########.fr       */
+/*   Updated: 2025/04/19 21:24:14 by restevez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 
 # include <stdbool.h> //To use bool flags, e.g, to print or not to print
 # include <limits.h> //To define MIN and MAX macros
-/* # include "../ft_printf/libft/libft.h"
-# include "../ft_printf/ft_printf.h" */
+# include "../libft/libft.h"
 
 // A container of data enclosed in {} braces. `s_` for struct
 typedef struct s_stack_node
