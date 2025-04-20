@@ -6,7 +6,7 @@
 #    By: restevez <restevez@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/18 19:30:05 by restevez          #+#    #+#              #
-#    Updated: 2025/04/19 21:37:24 by restevez         ###   ########.fr        #
+#    Updated: 2025/04/19 22:07:25 by restevez         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,8 @@ RM				= rm -f
 COMMANDS_PATHS	= $(SRC_DIR)commands/push.c \
 					$(SRC_DIR)commands/rev_rotate.c \
 					$(SRC_DIR)commands/rotate.c \
+					$(SRC_DIR)commands/sort_utils.c \
 					$(SRC_DIR)commands/sort_stacks.c \
-					$(SRC_DIR)commands/sort_three.c \
 					$(SRC_DIR)commands/swap.c
 
 PUSH_SWAP_PATHS	= $(SRC_DIR)handle_errors.c \

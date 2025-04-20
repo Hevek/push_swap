@@ -6,7 +6,7 @@
 /*   By: restevez <restevez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:18:05 by restevez          #+#    #+#             */
-/*   Updated: 2025/04/18 19:25:48 by restevez         ###   ########.fr       */
+/*   Updated: 2025/04/19 22:03:09 by restevez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,6 @@ void	free_stack(t_stack_node **stack)
 void	free_errors(t_stack_node **a)
 {
 	free_stack(a);
-	ft_printf("Error\n");
+	ft_putendl_fd("Error", STDERR_FILENO);
 	exit(1);
 }

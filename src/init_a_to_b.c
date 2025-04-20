@@ -6,7 +6,7 @@
 /*   By: restevez <restevez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:17:46 by restevez          #+#    #+#             */
-/*   Updated: 2025/04/18 19:25:53 by restevez         ###   ########.fr       */
+/*   Updated: 2025/04/19 22:03:49 by restevez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,8 @@ void	current_index(t_stack_node *stack)
 	}
 }
 
-static void	set_target_a(t_stack_node *a, t_stack_node *b)//Find `a` node's target in stack `b`
+//Find `a` node's target in stack `b`
+static void	set_target_a(t_stack_node *a, t_stack_node *b)
 {
 	t_stack_node	*current_b;
 	t_stack_node	*target_node;
@@ -45,7 +46,7 @@ static void	set_target_a(t_stack_node *a, t_stack_node *b)//Find `a` node's targ
 		current_b = b;
 		while (current_b)
 		{
-			if (current_b->nbr < a->nbr 
+			if (current_b->nbr < a->nbr
 				&& current_b->nbr > best_match_index)
 			{
 				best_match_index = current_b->nbr;
@@ -75,7 +76,7 @@ static void	cost_analysis_a(t_stack_node *a, t_stack_node *b)
 			a->push_cost = len_a - (a->index);
 		if (a->target_node->above_median)
 			a->push_cost += a->target_node->index;
-		else //If `a` node is indeed above median and its target `b` node is below median
+		else
 			a->push_cost += len_b - (a->target_node->index);
 		a = a->next;
 	}

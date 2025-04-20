@@ -6,7 +6,7 @@
 /*   By: restevez <restevez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:16:03 by restevez          #+#    #+#             */
-/*   Updated: 2025/04/18 19:26:02 by restevez         ###   ########.fr       */
+/*   Updated: 2025/04/19 22:25:08 by restevez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 	a = NULL;
 	b = NULL;
 	if (argc == 1 || (argc == 2 && !argv[1][0]))
-		return (1);
+		return (ft_putendl_fd("Error", STDERR_FILENO), 1);
 	else if (argc == 2)
 		argv = split(argv[1], ' ');
 	init_stack_a(&a, argv + 1);
