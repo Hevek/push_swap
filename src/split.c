@@ -6,7 +6,7 @@
 /*   By: restevez <restevez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 19:13:21 by restevez          #+#    #+#             */
-/*   Updated: 2025/04/18 19:26:12 by restevez         ###   ########.fr       */
+/*   Updated: 2025/04/19 22:04:16 by restevez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,47 +91,3 @@ char	**split(char *s, char c)
 	result_array[i] = NULL;
 	return (result_array);
 }
-
-
-/*
- Both functions, `ft_split()` `split()` split a string into an array of substrings using a specified delimiter character. 
- However, the differences are:
-
- #1	Function Signature:
-	- `ft_split` takes a constant string (const char *s) as input.
-	- `split` takes a mutable string (char *s) as input.
-
-#2	Input Mutability:
-	- `ft_split` takes a constant string (const char *s) as input, indicating that it does not modify the input string.
-	- `split` takes a mutable string (char *s) as input, indicating it may modify the input string during tokenization.
-	- Mutable strings can be modified in-place, meaning you can change the characters within the string without creating 
-	  a new string object.
-	- Immutable strings, on the other hand, cannot be modified once they are created. Any operation that appears to modify 
-	  an immutable string actually creates a new string with the desired changes.
-
-#TOKENIZATION:
-	- Tokenization is the process of breaking down a text or a sequence of characters into smaller units called tokens. 
-	- Tokens are typically words, phrases, symbols, or other meaningful elements within the text.
-	- In the case of push_swap,  Word tokenization is the process of splitting text into words or word-like units. 
-	  It involves identifying word boundaries and separating words from each other. For example, in the sentence "Tokenization 
-	  is important," the words "Tokenization," "is," and "important" are individual tokens.
-	- Purpose: 
-	  Tokenization is a preprocessing step that simplifies text analysis tasks. 
-	  It allows text to be represented in a form that can be easily processed by algorithms and models. 
-
-#3	Memory Management:
-	- `ft_split` allocates memory for the resulting string array and the individual substrings within the function, 
-	  and frees memory
-	- `split` also allocates memory for the resulting string array and substrings but relies on the caller to free the memory.
-
-#4	Static Variable Usage:
-	- `ft_split` does not use static variables in its implementation.
-	- `split` uses a static variable cursor to keep track of the position in the input string for tokenization.
-
-#5	Error Handling:
-	- `ft_split` returns NULL if memory allocation fails during the tokenization process.
-	- `split` exits the program with an error code if the number of words is zero.
-
-In summary, both functions perform string tokenization, but they have differences in terms of input mutability, memory 
-management, and error handling. 
-*/
